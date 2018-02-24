@@ -1,5 +1,5 @@
 # master-thesis-template
-Master Thesis proposal for UiA 2018
+Master's Thesis template for University of Agder, ICT
 A full example can be found [here](https://arxiv.org/pdf/1801.09597.pdf)
 
 # How to use with ShareLaTeX
