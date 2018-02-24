@@ -1,0 +1,357 @@
+\documentclass{uia}
+
+% Todo Notes
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+% You can remove this
+\usepackage{lipsum}
+
+
+% Title of your thesis
+\title{Deep Reinforcement Learning in Disneyland using TD($\lambda$) derived methods}
+
+% The author(s) of the thesis, Separate authors with \\
+\author{Dr. MacStuffins, and Mickey Mouse}
+
+% Supervisors of this thesis
+\supervisor{Supervisor 1\\Supervisor 2}
+
+% Which faculty you belong to
+\faculty{Faculty of Engineering and Science}
+
+% Which department you belong to
+\department{Department of ICT}
+
+% Define which year and month you are delivering your thesis.
+\setyear{2018}
+\setmonth{January}
+\date{\today}
+
+% These are printed at Page 2 and the last page. For most people, these can be left as is.
+\copyrightnotice{All rights reserved}
+\isbnprinted{}
+\isbnelectronic{}
+\serialnumber{}
+
+\begin{document}
+\pagenumbering{roman}
+
+% Your glossary is defined here. These can be used for keeping track of abbrievations troughout your thesis.
+% Example: I then used \gls{ConvNet} for my experiments......
+% This will then show up in your glossary.
+\input{glossary.tex}
+
+
+\maketitle
+
+% Page: Abstract
+\begin{abstract}
+	\lipsum[1]
+	
+	\noindent
+	\\
+	\lipsum[2]
+	
+	\noindent
+	\\
+	\lipsum[3]
+
+
+
+\end{abstract}
+\cleardoublepage
+
+% Page: Preface
+\begin{preface}
+	This is not mandatory.
+	\lipsum[1]
+\end{preface}
+\cleardoublepage
+
+% Page: Table of Contents
+\tableofcontents
+
+
+% Abbriviations
+\printglossaries
+\addcontentsline{toc}{chapter}{\numberline{}Glossary}%
+\cleardoublepage
+
+% Page: Figures
+\listoffigures
+\addcontentsline{toc}{chapter}{\numberline{}List of Figures}%
+\cleardoublepage
+ 
+% Page: Tables
+\listoftables
+\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{\numberline{}List of Publications}
+\listofpublication
+\cleardoublepage
+
+
+% Turn on page counting
+\pagenumbering{arabic}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+% YOUR THESIS BEGINS HERE!
+% YOUR THESIS BEGINS HERE!
+% YOUR THESIS BEGINS HERE!
+% This layout uses parts to separate the 1. Research, 2. Contributions, and 3. Experiments and Results.
+% Discuss with your supervisor if this is needed, as it may be a bit overkill.
+% ------------------------------------------------------------------------------------------------
+
+\part{Research Overview}
+\chapter{Introduction}
+\section{Motivation}
+%What is the problem?
+%Why is it interesting and important?
+%Why is it hard? (E.g., why do naive approaches fail?)
+%Why hasn't it been solved before? (Or, what's wrong with previous proposed solutions? How does mine differ?)
+%What are the key components of my approach and results? Also include any specific limitations.
+
+\section{Thesis definition}
+\label{sec:intro:definition}
+Define some goals for your thesis, and maybe some Hypotheses you want to test.
+\subsection{Thesis Goals}
+
+\textbf{Goal 1: } ....
+
+\textbf{Goal 2: } ....
+
+\textbf{Goal 3: } ....
+
+\textbf{Goal 4: } ....
+
+\subsection{Hypotheses}
+
+\textbf{Hypothesis 1: } ...
+
+\textbf{Hypothesis 2: } ...
+
+\subsection{Summary}
+You may want to summarize your goals and hypotheses here. Can be removed if not needed.
+
+\section{Contributions}
+Summarize the contributions proposed by your work 
+
+\section{Thesis outline}
+\textit{Outline your thesis structure. Below is an example}
+
+Chapter~\ref{chap:bg} provides preliminary background research for Artificial Neural Networks (\ref{sec:bg:ann}, \ref{sec:bg:convnet}), Generative Models~(\ref{sec:bg:generative}), Markov Decision Process (\ref{sec:bg:mdp}), and Reinforcement Learning (\ref{sec:bg:rl}).
+
+Chapter~\ref{chap:sota} investigates the current state-of-the-art in Deep Neural Networks (\ref{sec:sota:nn}), \gls{RL} (\ref{sec:sota:rl}), \gls{GAN} (\ref{sec:sota:gan}) and Game environments (\ref{sec:sota:gameenv}).
+
+Chapter~\ref{chap:env} outlines the technical specifications for the new game environments Flash RL (\ref{sec:env:flashrl}), Deep Line Wars (\ref{sec:env:deeplinewars}), Deep RTS (\ref{sec:env:deeprts}), and Maze (\ref{sec:env:maze}). In addition, a well established game environment (Section~\ref{sec:env:flappybird}) is introduced to validate experiments conducted in this thesis.
+
+Chapter~\ref{chap:solutions} introduces the proposed solutions for the goals defined in Section~\ref{sec:intro:definition}. Section~\ref{sec:solutions:environments} outlines how the environments are presented as a learning platform. Section~\ref{sec:solutions:capsnet} introduces the proposal to use Capsules in \gls{RL}. Section~\ref{sec:solutions:dqn} describes the Deep Q-Learning algorithm and the implementations used for the experiments in this thesis. Finally, the artificial training data generator is outlined in Section~\ref{sec:solutions:datagen}.
+
+
+Chapter~\ref{chap:results:ccdn} and \ref{chap:results:dqn} shows experimental results from the work presented in Chapter~\ref{chap:solutions}. 
+
+Chapter~\ref{chap:conclusion} concludes the thesis hypotheses and provides a summary of the work done in this thesis. Section~\ref{sec:conclusion:future_work} outlines the road-map for future research related to the thesis.
+
+
+\chapter{Background}
+\label{chap:bg}
+A little introduction of your primary field of research and quickly describe the upcoming sections.
+The upcoming sections outlines theory about your research area.
+
+\section{Artificial Neural Networks}
+\label{sec:bg:ann}
+
+
+\subsection{Activation Functions}
+\label{sec:bg:ann:activation}
+
+\subsection{Optimization}
+\label{sec:bg:ann:optimization}
+
+\subsection{Loss Functions}
+\label{sec:bg:ann:loss_functions}
+
+\subsection{Hyper-parameters}
+\label{sec:bg:ann:hyper_parameters}
+
+
+\section{Convolutional Neural Networks}
+\label{sec:bg:convnet}
+
+\subsection{Pooling}
+\label{sec:bg:convnet:pooling}
+
+\subsection{Summary}
+\label{sec:bg:convnet:summary}
+
+\section{Generative Models}
+\label{sec:bg:generative_models}
+
+
+\section{Markov Decision Process}
+\label{sec:bg:mdp}
+
+\section{Reinforcement Learning}
+\label{sec:bg:rl}
+
+
+\subsection{Q-Learning}
+\label{sec:bg:rl:ql}
+\subsection{Deep Q-Learning}
+\label{sec:bg:rl:dql}
+
+
+\chapter{State-of-the-art}
+\label{chap:sota}
+In this chapter you outline previous work in your field. 
+
+\section{Deep Learning}
+\label{sec:sota:nn}
+
+\section{Deep Reinforcement Learning}
+\label{sec:sota:rl}
+
+
+\section{Generative Modeling}
+\label{sec:sota:gan}
+
+\section{Capsule Networks}
+\label{sec:sota:capsnet}
+
+\section{Game Learning Platforms}
+\label{sec:sota:gameenv}
+
+\section{Reinforcement Learning in Games}
+\label{sec:sota:games}
+
+
+\part{Contributions}
+
+\chapter{Environments}
+\label{chap:env}
+In this case, the thesis propose new games to the Reinforcement Learning community. First explain what your going to present in the Chapter overview, then outline each of your contributions in a section.
+
+\section{FlashRL}
+\label{sec:env:flashrl}
+
+\section{Deep Line Wars}
+\label{sec:env:deeplinewars}
+
+\section{Deep RTS}
+\label{sec:env:deeprts}
+
+\section{Deep Maze}
+\label{sec:env:maze}
+
+\section{Flappy Bird}
+\label{sec:env:flappybird}
+
+
+\chapter{Proposed Solutions}
+\label{chap:solutions}
+
+Your solution strategy/method
+
+\section{Environments}
+\label{sec:solutions:environments}
+
+\section{Capsule Networks}
+\label{sec:solutions:capsnet}
+
+\section[Deep Q-Learning]{Deep Q-Learning\footnote{General knowledge of ANN, DQN, and CapsNet from Chapter \ref{chap:bg} is required.}}
+\label{sec:solutions:dqn}
+
+\section{Artificial Data Generator}
+\label{sec:solutions:datagen}
+
+\part{Experiments and Results}
+
+\chapter[Conditional Convolution Deconvolution Network]{Conditional Convolution Deconvolution Network}
+\chaptermark{CCDN}
+\label{chap:results:ccdn}
+
+\section{Introduction}
+\label{sec:results:datagen:ccdn}
+
+\section{Deep Line Wars}
+\label{sec:results:datagen:dlw}
+
+\section{Deep Maze}
+\label{sec:results:datagen:ccdn:deepmaze}
+
+\section{FlashRL: Multitask}
+\label{sec:results:datagen:ccdn:flashrl}
+
+\section{Flappy Bird}
+\label{sec:results:datagen:ccdn:flappybird}
+
+\section{Summary}
+Summarize what you just presented
+
+\chapter{Deep Q-Learning}
+\label{chap:results:dqn}
+
+
+\section{Experiments}
+
+\section{Deep Line Wars}
+
+\section{Deep RTS}
+
+\section{Deep Maze}
+
+\section{FlashRL: Multitask}
+
+\section{Flappy Bird}
+
+\section{Summary}
+
+\chapter{Conclusion and Future Work}
+\label{chap:conclusion}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\section{Future Work}
+\label{sec:conclusion:future_work}
+
+\cleardoublepage
+\renewcommand{\bibname}{References}
+\bibliography{library}
+\bibliographystyle{plain}
+\addcontentsline{toc}{chapter}{\numberline{}References}
+
+
+
+\appendix
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{Appendices}
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Hardware Specification}
+\label{appendix:hwspec}
+	\begin{table}[H]
+	\begin{tabular}{|l*{1}{r}|r}
+		\hline
+		Operating System & Ubuntu 17.10  \\
+		\hline
+		Processor            & Intel i7-7700K \\
+		\hline
+		Memory           & 64GB DDR4  \\
+		\hline
+		Graphics     & 1x NVIDIA GeForce 1080TI   \\
+		\hline
+	\end{tabular}
+\end{table}
+%\section{Another appendix Subsection}
+
+% If you have any publications related to your thesis, include them as PDF here
+%\part{Publications}
+% add them here!
+\makebackcover
+
+\end{document}
+

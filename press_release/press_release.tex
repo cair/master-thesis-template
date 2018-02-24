@@ -1,0 +1,93 @@
+
+\documentclass[11pt]{article} % Font size
+
+\usepackage{charter} % Use the Charter font for the document text
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage[margin=1.1in]{geometry}
+
+\newcommand{\firststudent}{Per-Arne Andersen}
+\newcommand{\picturefirststudent}{profile1.png}
+\newcommand{\contactfirststudent}{mc.stuffins@uia.no}
+\newcommand{\firstsupervisor}{Morten Goodwin}
+\newcommand{\secondsupervisor}{Ole-Christoffer Granmo}
+
+
+\lhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=0.5\linewidth]{../uia_eng}} \end{picture}}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{}
+
+
+%\PhrContact{Contact} % Uncomment this line to change the 'Contact:' text
+
+%----------------------------------------------------------------------------------------
+%	PRESS RELEASE INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+\newcommand{\subtitle}{This is a subtitle to the headline giving more information about the headline.} % Subtitle for the press release, if you don't want one just remove the subtitle text leaving the rest of the command
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\section*{Master's Thesis in Information and Communication Technologies \the\year} % When the press release may be used
+
+\hrule height 1pt
+\begin{table}[h]
+	\footnotesize
+	\begin{tabular}{p{0.15\textwidth} p{0.25\textwidth} p{0.25\textwidth} p{0.20\textwidth}}
+		
+		\textbf{Candidate}   & Dr. MacStuffins      & \multirow{6}{*}{\fbox{\includegraphics[width=0.15\textwidth]{\picturefirststudent}}} \\
+		& mc.stuffins@uia.no        &                      \\
+		&                        &                      \\
+		&                        &                      \\
+		\textbf{Supervisors} & Morten Goodwin, PhD         &                      \\
+		& Ole-Christoffer Granmo, Prof &                     \\
+		& & 
+	\end{tabular}
+\end{table}
+
+\hrule height 1pt
+
+\section*{Deep Reinforcement Learning using Capsules in\\Advanced Game Environments}
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\vspace{-30pt}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{./deep_line_wars.pdf}%{./Pictures/mainscreen1.png}
+    \label{fig:databaseUserTable}
+  \end{center}
+
+\end{wrapfigure} 
+\textbf{In recent years, Neural Networks have shown groundbreaking performance in several popular games, using Reinforcement Learning methods. We show that capsule neural networks, a novel deep learning architecture, can provide results comparable to previous methods in advanced games. We create four new game environments that challenge players in several difficult tasks.}
+\\
+\\
+\\
+\noindent
+
+\noindent
+\textbf{1. Games} are a great way to measure how well a player performs a task. This thesis present \textit{Flash RL}, \textit{Deep Line Wars} (as shown in the figure), \textit{Deep RTS}, and \textit{Deep Maze}, four novel games that challenge players in different tasks and require a high level of expertise to solve them all. This thesis aims to use games to learn computer programs to play without human assistance.
+\\
+
+\noindent
+\textbf{2. Reinforcement Learning} is a promising technique used to learn computers how to perform tasks without assistance. Reinforcement Learning is much like how a humans gain experience by interacting with the world in a trial and error manner. We use Capsule Neural Networks, a digital brain analogy to memorize experiences. This thesis uses Reinforcement Learning and Capsule Neural Networks to control the player in the previously presented games. 
+\\
+
+\noindent
+\textbf{3. Creating Experiences:} Humans create experiences by interacting with the environment, but is it possible to experience things that never happened? Humans can create fake experiences by dreaming for example. We propose a computer algorithm that is presented with an image of the game and an action proposal. The goal is then for the computer to dream into the future and create an experience that never happened. We show that this is possible using Neural Networks.
+\\
+
+\noindent
+\textbf{We show that} Capsule Neural Networks can learn important features from advanced game environments and requires less training data when utilizing CCDN generated training data for some game environments.
+
+
+
+
+%\end{newlfm}
+\end{document}
